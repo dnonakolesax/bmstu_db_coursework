@@ -1,4 +1,5 @@
 FROM python:3.8-slim-buster
+FROM joyzoursky/python-chromedriver:3.8
 
 WORKDIR /app
 
@@ -10,3 +11,4 @@ RUN pip3 install selenium
 COPY . .
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+
