@@ -14,7 +14,7 @@ driver = webdriver.Chrome(options=options)
 
 driver.get('localhost:5001')
 
-driver.find_element(By.XPATH, 'safgaafs')
+driver.find_element(By.XPATH, 'safgaaf')
 
 driver.close()
 
