@@ -1,6 +1,11 @@
 on: push
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: docker run -d -it dnonakolesax/bmstu-course-db:latest bash 
+    - uses: actions/checkout@v2
   test:
     runs-on: ubuntu-latest
     steps:
