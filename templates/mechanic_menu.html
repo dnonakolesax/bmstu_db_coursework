@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block manager %}
+<h1 align="center"> Здравствуйте, дорогой техник! </h1>
+<p align="center">
+    <a href="{{ url_for('bp_query.autopark') }}">Автопарк</a><br><br>
+    <a href="{{ url_for('bp_query.show_int_profile') }}">Профиль</a><br><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</p>
+{% endblock %}

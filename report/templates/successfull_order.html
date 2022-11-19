@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+        <h1>Ваш заказ № {{ order_id }} передан для обработки</h1>
+    </div>
+<div align="center">
+        <a href="{{ url_for('bp_query.queries')}}">К списку заказов</a>
+        <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+    </div>
+</body>
+</html>

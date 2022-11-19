@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск продукта</title>
+    <link type="text/css" rel="stylesheet" href="static/sem2.css">
+</head>
+<body>
+<center>
+    <h2>Параметры поиска:</h2>
+    <form action="" method="POST">
+        <label for="date_from">Год выпуска с:</label>
+        <input type = "number" min = "1970" max = "2022" name="date_from" id="date_from" value={{ date_from }}>
+        <label for="date_from"> по:</label>
+        <input  type = "number" min = "1970" max = "2022" name="date_to" id="date_to" value={{ date_to }}>
+        <label for="plate">Номер:</label>
+        <input type = "text" name = "plate" model = "plate" placeholder="А001АА777", value = {{ plate }}>
+        <label for="carmod">Марка/модель:</label>
+        <input type = "text" name = "carmod" model = "carmod" placeholder="Ferrari 599XE", value = {{ car_mod }}>
+        <input type="submit" value="Поиск!">
+    </form>
+</center>
+<div>
+       {% block autopark_result %}{% endblock %}
+</div>
+
+</body>
+</html>

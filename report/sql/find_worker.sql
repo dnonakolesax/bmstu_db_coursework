@@ -1,0 +1,1 @@
+SELECT * from personal where Name like '$work_name%' and Post = '$work_post'

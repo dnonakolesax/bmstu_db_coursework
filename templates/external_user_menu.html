@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block external_user %}
+<h1 align="center"> Здравствуйте, дорогой клиент! </h1>
+<p align="center">
+    <a href="{{ url_for('bp_query.create_order') }}">Создать заказ</a><br><br>
+    <a href="{{ url_for('bp_query.queries') }}">История заказов</a><br><br>
+    <a href="{{ url_for('bp_query.show_ext_profile') }}">Профиль</a><br><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</p>
+{% endblock %}

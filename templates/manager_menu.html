@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block manager %}
+<h1 align="center"> Здравствуйте, дорогой менеджер! </h1>
+<p align="center">
+    <a href="{{ url_for('bp_query.select_driver') }}">Распределение заказов</a><br><br>
+    <a href="{{ url_for('bp_query.order_history') }}">История заказов</a><br><br>
+    <a href="{{ url_for('bp_query.autopark') }}">Автопарк</a><br><br>
+    <a href="{{ url_for('bp_query.workers') }}">Сотрудники</a><br><br>
+    <a href="{{ url_for('bp_query.otchet') }}">Отчёт</a><br><br>
+    <a href="{{ url_for('bp_query.show_int_profile') }}">Профиль</a><br><br>
+    <a href="/exit"> Нажмите для выхода из системы</a>
+</p>
+{% endblock %}

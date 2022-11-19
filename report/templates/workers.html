@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск продукта</title>
+    <link type="text/css" rel="stylesheet" href="static/sem2.css">
+</head>
+<body>
+<center>
+    <h2>Параметры поиска:</h2>
+    <form action="" method="POST">
+        <label for="plate">Имя:</label>
+        <input type = "text" name = "work_name" model = "work_name" placeholder="Райан Гослинг", value = {{ plate }}>
+        <label for="carmod">Должность:</label>
+        <input type = "text" name = "work_post" model = "work_post" placeholder="Водитель", value = {{ car_mod }}>
+        <input type="submit" value="Поиск!">
+    </form>
+</center>
+<div>
+       {% block workers_result %}{% endblock %}
+</div>
+
+</body>
+</html>

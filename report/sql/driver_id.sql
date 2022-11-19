@@ -1,0 +1,1 @@
+select P_id from personal where Name = '$drv_name'

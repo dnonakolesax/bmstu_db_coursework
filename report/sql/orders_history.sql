@@ -1,0 +1,1 @@
+select * from invoice where Orderer_id = '$client_id'

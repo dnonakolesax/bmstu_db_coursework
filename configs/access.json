@@ -1,0 +1,25 @@
+{
+  "manager": [
+    "bp_query.select_driver",
+    "bp_query.order_history",
+    "bp_query.autopark",
+    "bp_query.workers",
+    "bp_query.otchet",
+    "bp_query.show_int_profile"
+  ],
+  "mechanic": [
+    "bp_query.autopark",
+    "bp_query.show_int_profile"
+  ],
+  "driver": [
+    "bp_query.new_d_orders",
+    "bp_query.curr_d_orders",
+    "bp_query.autopark",
+    "bp_query.show_int_profile"
+  ],
+  "external": [
+    "bp_query.create_orders",
+    "bp_query.queries",
+    "bp_query.show_ext_profile"
+  ]
+}

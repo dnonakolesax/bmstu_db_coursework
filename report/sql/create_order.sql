@@ -1,0 +1,1 @@
+INSERT INTO `delivery_company`.`invoice` (`Inv_id`, `Invoice_date`, `Invoice_cargo_weight`, `Invoice_cargo_amount`, `Personal_id`, `Cargo_id`, `Orderer_id`, `Status`, `From_address`, `To_address`) VALUES (NULL, '$date', '$weight', '$amount', NULL, '$Cargo_id', '$Orderer_id', '$Status', '$From', '$To');

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Переход по ссылкам</title>
+    <link type="text/css" rel="stylesheet" href="static/main.css">
+</head>
+<body>
+<center>
+    <h2>Главное меню</h2>
+    <ul id="nav">
+        <li><a href="{{ url_for('page1') }}">Нажмите для перехода на страницу 1</a></li>
+        <li><a href="/page2">Нажмите для перехода на страницу 2</a></li>
+        <li><a href="/exit">Нажмите для выхода из системы</a></li>
+    </ul>
+</center>
+</body>
+</html>

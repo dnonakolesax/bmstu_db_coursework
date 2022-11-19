@@ -1,0 +1,1 @@
+select Client_id from external_user where user_id = '$user_id'

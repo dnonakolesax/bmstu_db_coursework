@@ -1,0 +1,1 @@
+INSERT INTO `delivery_company`.`client_cargo` (`CC_id`, `CC_weight`, `CC_amount`, `PossibleCargo_id`) VALUES (NULL, '$weight', '$amount', '$PC_id');
