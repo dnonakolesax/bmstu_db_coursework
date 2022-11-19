@@ -14,7 +14,7 @@ app.register_blueprint(blueprint_query, url_prefix='/report')
 app.config['db_config'] = json.load(open('configs/db.json'))
 app.config['access_config'] = json.load(open('configs/access.json'))
 
-
+#uzbek
 @app.route('/')
 @login_required
 def menu_choice():
