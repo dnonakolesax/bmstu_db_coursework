@@ -10,5 +10,5 @@ RUN pip3 install selenium
 
 COPY . .
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
-
+CMD [ "python3", "-m" , "flask", "run", "--host=127.0.0.1"]
+CMD ["python", "test/auth_test.py"]
