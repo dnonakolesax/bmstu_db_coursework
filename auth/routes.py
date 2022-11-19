@@ -29,7 +29,7 @@ def start_auth():
                 user_dict = user_info[0]
                 session['user_id'] = user_dict['user_id']
                 session['user_group'] = user_dict['user_group']
-                session.permanent = True
+                session.permanent = False
                 return redirect(url_for('menu_choice'))
             else:
                 return render_template('input_login.html', message='Пользователь не найден')
