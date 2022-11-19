@@ -4,6 +4,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - run: docker run --rm -it -d --name bmstu-course-db dnonakolesax/bmstu-course-db:latest bash
+    - run: docker run --it -d --name bmstu-course-db dnonakolesax/bmstu-course-db:latest bash
     - run: docker exec bmstu-course-db -d python test/auth_test.py
     - uses: actions/checkout@v2
