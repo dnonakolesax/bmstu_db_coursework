@@ -10,7 +10,7 @@ options.add_argument('--disable-dev-shm-usage')
 options.add_argument('--headless')
 options.add_argument('--start-maximized')
 
-driver = webdriver.Chrome(options=options)
+driver = webdriver.Chrome()
 
 driver.get('localhost:5001')
 
