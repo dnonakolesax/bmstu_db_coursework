@@ -11,5 +11,4 @@ jobs:
     steps:
     - run: docker run -it -d --name bmstu-course-db dnonakolesax/bmstu-course-db:latest bash
     - run: docker exec bmstu-course-db python test/auth_test.py
-    - run: echo $?
     - uses: actions/checkout@v2
