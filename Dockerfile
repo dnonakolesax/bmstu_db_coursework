@@ -8,4 +8,6 @@ RUN pip3 install pymysql
 RUN pip3 install cryptography
 RUN pip3 install selenium
 
+COPY . .
+
 CMD [ "python3", "-m" , "flask", "run", "--host=127.0.0.1"]
