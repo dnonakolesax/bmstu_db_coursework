@@ -6,3 +6,10 @@ jobs:
     steps:
     - run: docker run -d -it dnonakolesax/bmstu-course-db bash
     - uses: actions/checkout@v2
+    
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - run: docker run -d -it dnonakolesax/bmstu-course-db bash
+    - uses: actions/checkout@v2
+    - run: python test/auth_test.py
