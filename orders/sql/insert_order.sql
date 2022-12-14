@@ -1,0 +1,1 @@
+insert into invoice values (NULL, '$date', NULL, '$Orderer_id', '$Status', '$From', '$To', '$Price')

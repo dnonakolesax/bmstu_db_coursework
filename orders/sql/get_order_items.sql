@@ -1,0 +1,1 @@
+select pc_name, pc_measurement, amount from delivery_list left join possible_cargo on (pc_id=pcargo_id) where invoice_id='$invoice_id'

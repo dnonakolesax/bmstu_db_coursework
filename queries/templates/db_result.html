@@ -1,0 +1,30 @@
+{% macro db_result(schema, result, show_more=false) %}
+<center>
+    <h1>Результат запроса:</h1>
+    <table border=1 width=80%>
+        <tr>
+            {% for column in schema %}
+            <td class="table-title">{{ column }}</td>
+            {% endfor %}
+            <td style="border:none; border-collapse: collapse;"></td>
+        </tr>
+        {% for line in result %}
+        <tr>
+            {% for column in line %}
+            <td>{{ column }}</td>
+            {% endfor %}
+            {% if show_more %}
+            <form action="" method="POST" name="form2">
+                <td style="border:0px;"><input width="200px" type="submit" name="ord_but"
+                                               value="Подробнее">
+                    <input type="hidden" name="ord_id"
+                                               value="{{line[0]}}">
+                </td>
+            </form>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+
+</center>
+{% endmacro %}

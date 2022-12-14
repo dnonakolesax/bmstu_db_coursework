@@ -1,1 +1,0 @@
-select * from personal where P_id = '$p_id'

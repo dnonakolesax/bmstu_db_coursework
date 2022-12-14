@@ -1,0 +1,1 @@
+SELECT PC_name, PC_measurement FROM delivery_company.possible_cargo

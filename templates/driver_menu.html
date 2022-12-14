@@ -1,13 +1,33 @@
 {% extends 'base.html' %}
 
 {% block manager %}
-<h1 align="center"> Здравствуйте, дорогой водитель! </h1>
-<p align="center">
-    <a href="{{ url_for('bp_query.new_d_orders') }}">Новые заказы</a><br><br>
-    <a href="{{ url_for('bp_query.curr_d_orders') }}">Текущие заказы</a><br><br>
-    <a href="{{ url_for('bp_query.autopark') }}">Автопарк</a><br><br>
-    <a href="{{ url_for('bp_query.show_int_profile') }}">Профиль</a><br><br>
-    <a href="/exit"> Нажмите для выхода из системы</a>
-</p>
+<div class="card">
+    <div class="header">
+        <center>
+            <h3>Вам доступны следующие действия:</h3>
+        </center>
+    </div>
+    <div class="body">
+        <ul>
+            <a href="{{ url_for('bp_query.all_d_orders') }}">
+                <li>
+                    <ion-icon name="checkbox-outline" class="ion-1x"></ion-icon>
+                    Новые заказы
+                </li>
+            </a>
+            <a href="{{ url_for('bp_query.autopark') }}">
+                <li>
+                    <ion-icon name="car-outline" class="ion-1x"></ion-icon>
+                    Автопарк
+                </li>
+            </a>
+            <a href="/exit">
+                <li>
+                    <ion-icon name="log-out-outline" class="ion-1x"></ion-icon>
+                    Выход
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
 {% endblock %}
-</html>

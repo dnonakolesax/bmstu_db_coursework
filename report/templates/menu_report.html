@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчёты</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+    <style type="text/css">
+        .named_list {
+            display: inline-block;
+            width: 400px;
+            padding: 30px 30px 30px 30px;
+            font-size: 28px;
+            }
+    </style>
+</head>
+<body>
+<div class="screen-1">
+    <center>
+        <h3>Меню отчётов</h3>
+    </center>
+    <div class="body">
+        {% for report in report_list %}
+        <form action="" method="POST">
+            <label for="create_rep" class="named_list">{{report['rep_name']}}</label>
+            {% if allow_create %}<input type=submit name=create_rep id=create_rep value="Создать"> {% endif %}
+            <input type="submit" name="view_rep" value="Смотреть">
+            <input type="hidden" name="rep_id" value="{{report['rep_id']}}">
+        </form>
+        {% endfor %}
+        <br><br>
+        <div align="center">
+            <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+        </div>
+        <br><br>
+    </div>
+</body>
+</html>

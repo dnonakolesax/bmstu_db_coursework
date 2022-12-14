@@ -1,0 +1,2 @@
+SELECT Inv_id, Invoice_date, IFNULL(Name,'$notdone'), Organization_name, Status, From_address, To_address, Price from invoice  JOIN client on (Orderer_id=Client_id)
+ LEFT JOIN personal on (Personal_id=P_id) invoice where Orderer_id = '$client_id' and Invoice_date between '$begin_date' and '$end_date' and Status = '$status' and From_address like '$From%' and To_address like '$To%'

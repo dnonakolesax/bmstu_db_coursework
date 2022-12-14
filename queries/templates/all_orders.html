@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказы</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+{% import 'db_result.html' as db_res %}
+<main>
+    <div class="screen-1" >
+        <center>
+            <h2>Параметры поиска:</h2>
+            <form action="" method="POST">
+                <label for="status">Статус:</label>
+                <select type=id="status" name="status">
+                    <option value="{{ sel_stat }}" selected> {{ sel_stat }}</option>
+                    {% for status in choose_status %}
+                    <option value="{{ status }}">{{ status }}</option>
+                    {% endfor %}
+                </select>
+                <label for="date_from">Дата заказа с:</label>
+                <div class="input-container">
+                    <input type="date" max="{{ cur_date }}" name="date_from" id="date_from" value="{{ from_val }}">
+                </div>
+                <label for="date_from">Дата заказа по:</label>
+                <div class="input-container">
+                    <input type="date" max="{{ cur_date }}" name="date_to" id="date_to" value="{{ to_val }}">
+                </div>
+                <div class="input-container" style="inline:block width:100px">
+                    <input type="text" name="from" id="from" value="{{From_ad}}">
+                    <label for="from">Начальный пункт</label>
+                </div>
+                <div class="input-container" style="inline:block width:100px">
+                    <input type="text" name="to" id="to" value="{{To_ad}}">
+                    <label for="to">Конечный пункт</label>
+                </div>
+                <input type="submit" value="Поиск!">
+            </form>
+        </center>
+        {{db_res.db_result(schema, result, true)}}
+        <div align="center">
+            <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+        </div>
+         <br><br><br>
+    </div>
+</main>
+</body>
+</html>

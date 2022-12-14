@@ -1,25 +1,26 @@
 {
   "manager": [
-    "bp_query.select_driver",
     "bp_query.order_history",
-    "bp_query.autopark",
     "bp_query.workers",
-    "bp_query.otchet",
-    "bp_query.show_int_profile"
+    "bp_report.view_rep1",
+    "bp_report.start_report",
+    "bp_report.view_rep2"
   ],
   "mechanic": [
-    "bp_query.autopark",
-    "bp_query.show_int_profile"
+    "bp_query.autopark"
   ],
   "driver": [
-    "bp_query.new_d_orders",
-    "bp_query.curr_d_orders",
-    "bp_query.autopark",
-    "bp_query.show_int_profile"
+    "bp_query.all_d_orders",
+    "bp_query.autopark"
   ],
   "external": [
-    "bp_query.create_orders",
-    "bp_query.queries",
-    "bp_query.show_ext_profile"
+    "bp_orders.create_order",
+    "bp_orders.confirm_order",
+    "bp_orders.save_order",
+    "bp_orders.clear_basket",
+    "bp_query.queries"
+  ],
+  "accountant": [
+    "bp_report"
   ]
 }

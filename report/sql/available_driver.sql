@@ -1,0 +1,1 @@
+select distinct rep_month, rep_year from personal_report

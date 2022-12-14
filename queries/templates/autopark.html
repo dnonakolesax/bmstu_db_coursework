@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск продукта</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+{% import 'db_result.html' as db_res %}
+<div class="screen-1">
+    <center>
+        <h2>Параметры поиска:</h2>
+        <form action="" method="POST">
+            <label for="date_from">Год выпуска с:</label>
+            <div class="input-container">
+                <input type="number" min="1970" max="2022" name="date_from" id="date_from" value={{ date_from }}>
+            </div>
+            <label for="date_from"> по:</label>
+            <div class="input-container">
+                <input type="number" min="1970" max="2022" name="date_to" id="date_to" value={{ date_to }}>
+            </div>
+            <div class="input-container" display="block">
+                <input type="text" name="plate" model="plate" placeholder="А001АА777" , value={{ plate }}>
+            </div>
+            <label for="carmod">Марка/модель:</label>
+            <div class="input-container">
+                <input type="text" name="carmod" model="carmod" placeholder="Ferrari 599XE" , value={{ car_mod }}>
+            </div>
+            <br>
+            <input type="submit" value="Поиск!">
+        </form>
+    </center>
+    <div>
+        {{db_res.db_result(schema, result)}}
+    </div>
+    <br>
+    <div align="center">
+            <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+        </div>
+    <br>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+select max(Inv_id) as max_id from invoice where Orderer_id = '$user_id'

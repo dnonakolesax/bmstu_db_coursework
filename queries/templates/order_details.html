@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали Вашего заказа</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+<div class="screen-1">
+    <center>
+        <h1>Общие сведения:</h1>
+        <table border=1 width=80%>
+            <tr>
+                {% for column in schema1 %}
+                <td class="table-title">{{ column }}</td>
+                {% endfor %}
+                <td style="border:none; border-collapse: collapse;"></td>
+            </tr>
+            {% for line in result1 %}
+            <tr>
+                {% for column in line %}
+                <td>{{ column }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <h1>Грузы:</h1>
+        <table border=1 width=80%>
+            <tr>
+                {% for column in schema2 %}
+                <td class="table-title">{{ column }}</td>
+                {% endfor %}
+                <td style="border:none; border-collapse: collapse;"></td>
+            </tr>
+            {% for line in result2 %}
+            <tr>
+                {% for column in line %}
+                <td>{{ column }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        {% if manager %}
+        <a href="{{ url_for('bp_query.order_history') }}">
+            <li>
+                <ion-icon name="file-tray-full-outline" class="ion-1x"></ion-icon>
+                К списку заказов
+            </li>
+        </a>
+        {% else %}
+        <a href="{{ url_for('bp_query.queries') }}">
+            <li>
+                <ion-icon name="file-tray-full-outline" class="ion-1x"></ion-icon>
+                К списку заказов
+            </li>
+        </a>
+        {% endif %}
+    </center>
+</div>
+</body>
+</html>

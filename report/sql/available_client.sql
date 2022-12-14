@@ -1,0 +1,1 @@
+select distinct report_month, report_year from client_report

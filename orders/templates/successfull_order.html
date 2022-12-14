@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ создан</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+<div class="screen-1">
+    <div align="center">
+        <h1>Ваш заказ № {{ order_id }} передан для обработки</h1>
+    </div>
+    <div align="center">
+        <ul>
+            <a href="{{ url_for('bp_orders.queries')}}"> <li> К списку заказов </li></a>
+            <a href="{{ url_for('menu_choice') }}"> <li> Возврат в меню </li></a>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

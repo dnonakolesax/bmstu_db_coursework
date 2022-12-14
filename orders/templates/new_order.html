@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый заказ</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+<div class="screen-1">
+    <center>
+        <h2>Параметры заказа:</h2>
+        <form action="" method="POST">
+            <br>
+            <h2>Товары:</h2>
+            <label for="cargo">Товар:</label>
+            <select type=id="cargo" name="cargo" placeholder="Товар" width="300px">
+                {% for type in cargo_types %}
+                <option value="{{ type }}">{{ type }}</option>
+                {% endfor %}
+            </select>
+            <label for="amount">Количество:</label>
+            <div class="input-container">
+                <input type="number" name="amount" id="amount" min="1" value="1" required>
+            </div>
+            <br>
+            <input type="submit" value="Добавить в заказ">
+        </form>
+        {% if order %}
+        <center>
+            <h1>Ваш заказ:</h1>
+            {% for key in order%}
+            <div>
+                <span>Наименование: </span>
+                <span>{{order[key]['cargo_name']}} </span>
+                <span>Количество ({{order[key]['cargo_mes']}}): </span>
+                <span>{{order[key]['cargo_amount']}}</span>
+            </div>
+            {% endfor %}
+            <a href="{{url_for('bp_orders.clear_basket')}}">Очистить заказ</a>
+            <br>
+            <a href="{{ url_for('bp_orders.confirm_order') }}">Перейти к оформлению заказа</a>
+        </center>
+        {% endif %}
+    </center>
+    <div align="center">
+        <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+    </div>
+</div>
+</body>
+</html>

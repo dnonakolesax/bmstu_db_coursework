@@ -1,0 +1,194 @@
+﻿input, button {
+    outline: none;
+    background-color: #1E2B32;
+    color: white;
+}
+
+.address {
+    width: 808px;
+    margin: 40px auto 0;
+    padding: 40px;
+     background-color: #1E2B32;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.075) 1px 1px 5px;
+}
+
+.address h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.address .kladr-error {
+    color: #df2c0f;
+}
+
+.col-1 {
+    float: left;
+}
+
+.col-2 {
+    margin-left: 384px;
+}
+
+.field label {
+    display: inline-block;
+    width: 80px;
+    vertical-align: middle;
+     background-color: #1E2B32;
+    color: white;
+}
+
+.field {
+    margin-bottom: 20px;
+    padding: 0;
+     background-color: #1E2B32;
+    color: white;
+}
+
+.field input {
+    height: 2em;
+    width: 240px;
+    border: 1px solid #d8d8d8;
+    padding: 0 7px;
+    background-color: #1E2B32;
+}
+
+.panel-map {
+    width: 384px;
+    height: 582px;
+    padding: 20px;
+    border: 1px solid #d8d8d8;
+    background: #1E2B32;
+    color: white;
+    background-size: 400px 250px;
+}
+
+.addition {
+    padding-top: 15px;
+}
+
+.addition .block {
+    display: block;
+    height: 165px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #d8d8d8;
+    background: #1E2B32;
+    color: white;
+    font-size: 13px;
+    width: 298px;
+}
+
+.addition .block:nth-child(1) {
+    height: 88px;
+    line-height: 20px;
+}
+
+.addition .title {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.addition ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.addition li {
+    margin-bottom: 5px;
+}
+
+
+#kladr_autocomplete small {
+    color: #AAA;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    linear-gradient(to bottom, rgba(10,10,10, .85), rgba(10,10,10, .85)),
+    url(https://www.pixel4k.com/wp-content/uploads/2022/12/rolls-royce-wraith-2021-4k_1670027665.jpg.webp);
+  background-size: cover;
+  height: 100vh;
+}
+
+.screen-1 {
+  background-color: #1E2B32;
+  font-family: 'Roboto', sans-serif;
+  padding: 0em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  gap: 2em;
+}
+.screen-1 .logo {
+  margin-top: 0em;
+}
+
+.screen-1 .footer {
+  display: flex;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 0em;
+}
+.screen-1 .footer span {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.card{
+  background-color: #1E2B32;
+  border-radius: 30px 30px;
+ display: flex;
+  flex-direction: column;
+  width: 664px;
+}
+
+.header{
+  border-radius: 30px 30px 0px 0px;
+  padding: 5px;
+  background-color: #2A3942;
+}
+
+.rwd-table {
+  background-color: #1E2B32;
+  color: white;
+   border-collapse: collapse;
+   border-color: #FFFFFF;
+  border-radius: .4em;
+  font-family: 'Roboto', sans-serif;
+  font-color: #FFFFFF;
+  overflow: hidden;
+  tr {
+    border-color: #FFFFFF;
+  }
+  th, td {
+    text-align:center;
+    padding: 10px !important;
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}

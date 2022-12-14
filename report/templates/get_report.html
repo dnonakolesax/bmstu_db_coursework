@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Просмотр отчётов</title>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+<div class="screen-1">
+    <center>
+        <h3>Доступны отчёты за следующие даты:</h3>
+    </center>
+    <form action="" method="POST">
+        <ul>
+            {% for report in report_list %}
+            <center>
+                <li><input width="200px" type="submit" name="rep_date" id="rep_date" value="{{report}}"></li>
+            </center>
+            {% endfor %}
+        </ul>
+    </form>
+    <center>
+        <a href="{{ url_for('bp_report.start_report') }}">Назад</a>
+    </center>
+    <br><br>
+</div>
+</body>
+</html>
+

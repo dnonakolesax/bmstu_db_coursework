@@ -1,0 +1,1 @@
+select * from client_report where report_year = '$rep_year' and report_month = '$rep_month'

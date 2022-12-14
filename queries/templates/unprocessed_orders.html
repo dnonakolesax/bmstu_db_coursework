@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Назначение водителя</title>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="templates/static/style.css">
+</head>
+<body>
+<div class="screen-1">
+    <center>
+        <h1>Необработанные заказы:</h1>
+        <table>
+            <tr>
+                {% for column in schema %}
+                <td class="table-title">{{ column }}</td>
+                {% endfor %}
+            </tr>
+            <form action="" method="POST">
+                {% for line in result %}
+                <tr>
+                    {% for column in line %}
+                    <td>{{ column }}</td>
+                    {% endfor %}
+                    <td width="200px">
+                        <select id="driver.{{ line[0] }}" name="driver.{{ line[0] }}">
+                            <option  width="300px"selected disabled hidden value="Назначить водителя"> Назначить водителя</option>
+                            {% for driver in drivers %}
+                            <option width="300px" value="{{ driver }}">{{ driver }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+                <input type="submit" value="Подтвердить">
+            </form>
+        </table>
+        <div align="center">
+            <a href="{{ url_for('menu_choice') }}">Возврат в меню</a>
+        </div>
+        <div align="center">
+        </div>
+    </center>
+</div>
+</body>
+</html>

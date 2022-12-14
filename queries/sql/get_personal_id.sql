@@ -1,0 +1,1 @@
+select personal_id from internal_user where user_id = '$user_id'
